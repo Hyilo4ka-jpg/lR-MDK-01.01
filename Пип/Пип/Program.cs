@@ -10,7 +10,14 @@ namespace Пип
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("ПУПИК");
+            Console.Write("Введите первое число z:");
+            int z = int.Parse(Console.ReadLine());
+
+            Console.Write("Введите второе число x:");
+            int x = int.Parse(Console.ReadLine());
+
+            Console.Write("Введите третье число c:");
+            int c = int.Parse(Console.ReadLine());
         }
     }
 }
