@@ -10,6 +10,7 @@ namespace Пип
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("ПУПИК");
         }
     }
 }
