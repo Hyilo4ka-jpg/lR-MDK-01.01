@@ -24,6 +24,7 @@ namespace Пип
             if (x > max) max = x;
             if (c > max) max = c;
 
+            Console.WriteLine($"Наибольшие число {max}");
         }
     }
 }
