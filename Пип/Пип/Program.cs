@@ -18,6 +18,12 @@ namespace Пип
 
             Console.Write("Введите третье число c:");
             int c = int.Parse(Console.ReadLine());
+
+            int max = z;
+
+            if (x > max) max = x;
+            if (c > max) max = c;
+
         }
     }
 }
