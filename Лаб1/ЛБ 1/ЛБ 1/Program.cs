@@ -66,6 +66,10 @@ namespace ЛБ_1
         }
         static void Main(string[] args)
         {
+            double square = CalculateSquare(); //выполняется функция и приравнивается значиние (>0<)
+            double squareForPainting = CalculateSquareForPainting(square);
+            double amountPaint = CalculateAmountPaint(squareForPainting);// вызывается функция "канкулятор кол-во краски", в неё подставляется значение площади под покраску
+            RecommendedAmount(amountPaint); // вызыв функции "рекомендуемое количество" и подставляется значение кол-во краски
         }
     }
 }
