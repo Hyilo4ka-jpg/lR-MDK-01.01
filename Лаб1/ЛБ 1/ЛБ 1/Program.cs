@@ -23,6 +23,22 @@ namespace ЛБ_1
             Console.WriteLine("Площадь стен: " + Square);
             return Square;
         }
+        public static double CalculateSquareForPainting(double square)
+        {
+            Console.WriteLine("Введите количество окон и дверей");
+            double squareWindow = 1.68;
+            double squareDoor = 1.6;
+            int countWindows = Convert.ToInt32(Console.ReadLine());
+            int countDoors = Convert.ToInt32(Console.ReadLine());
+            if (countWindows < 0 || countDoors < 0)
+            {
+                Console.WriteLine("Ошибка, количество окон или дверей <=0");
+                CalculateSquareForPainting(square);
+            }
+            double squareForPainting = square - (squareDoor * countDoors) - (squareWindow * countWindows);
+            Console.WriteLine("Площадь под покраску: " + squareForPainting);
+            return squareForPainting;
+        }
         static void Main(string[] args)
         {
         }
