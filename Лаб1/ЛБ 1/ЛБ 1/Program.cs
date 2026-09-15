@@ -39,6 +39,12 @@ namespace ЛБ_1
             Console.WriteLine("Площадь под покраску: " + squareForPainting);
             return squareForPainting;
         }
+        public static double CalculateAmountPaint(double squareForPainting)
+        {
+            double amount = squareForPainting * 150;
+            Console.WriteLine("Необходимое количество краски: " + amount);
+            return amount;
+        }
         static void Main(string[] args)
         {
         }
