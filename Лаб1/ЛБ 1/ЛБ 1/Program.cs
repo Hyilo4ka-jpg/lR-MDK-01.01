@@ -45,6 +45,25 @@ namespace ЛБ_1
             Console.WriteLine("Необходимое количество краски: " + amount);
             return amount;
         }
+        public static void RecommendedAmount(double amountPaint)
+        {
+            if (amountPaint <= 1000) // amoutPaint - it is количество краски
+            {
+                Console.WriteLine("Рекомендуемая банка 1л");
+            }
+            else if (amountPaint <= 2000)
+            {
+                Console.WriteLine("Рекомендуемая банка 2л");
+            }
+            else if (amountPaint <= 5000)
+            {
+                Console.WriteLine("Рекомендуемая банка 5л");
+            }
+            else if (amountPaint <= 10000)
+            {
+                Console.WriteLine("Рекомендуемая банка 10л");
+            }
+        }
         static void Main(string[] args)
         {
         }
