@@ -43,6 +43,58 @@ namespace Лаб_2
             }
             Console.WriteLine();
         }
+        static int[] CreateOrder(Material[] warehouse)
+        {
+            int[] order = new int[warehouse.Length];
+
+            int number = -1;
+
+            while (number != 0)
+            {
+                Console.Write("Введите номер материала (0 — конец заказа): ");
+                number = Convert.ToInt32(Console.ReadLine());
+
+                while (number < 0 || number > 5)
+                {
+                    Console.WriteLine("Введите число от 0 до 5.");
+                    Console.Write("Введите номер материала: ");
+                    number = Convert.ToInt32(Console.ReadLine());
+                }
+
+                if (number == 0)
+                {
+                    break;
+                }
+
+                Console.Write("Введите количество: ");
+                int quantity = Convert.ToInt32(Console.ReadLine());
+
+                while (quantity < 0)
+                {
+                    Console.WriteLine("Количество не может быть меньше нуля.");
+                    Console.Write("Введите количество: ");
+                    quantity = Convert.ToInt32(Console.ReadLine());
+                }
+
+                order[number - 1] += quantity;
+            }
+            for (int i = 0; i < warehouse.Length; i++)
+            {
+                if (order[i] > warehouse[i].Quantity)
+                {
+                    Console.WriteLine();
+                    Console.WriteLine($"Недостаточно материала: {warehouse[i].Name}.");
+                    return null;
+                }
+            }
+            int cost = 0;
+            for (int i = 0; i < warehouse.Length; i++)
+            {
+                cost += warehouse[i].Price * order[i]; warehouse[i].Quantity -= order[i];
+            }
+            Console.WriteLine(); Console.WriteLine($"Стоимость заказа: {cost} руб.");
+            return order;
+        }
 
         static void Main(string[] args)
         {
