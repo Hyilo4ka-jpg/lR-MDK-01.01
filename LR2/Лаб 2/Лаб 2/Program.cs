@@ -108,8 +108,13 @@ namespace Лаб_2
                 }
             }
         }
-            static void Main(string[] args)
+        static void Main(string[] args)
         {
+            Material[] warehouse = CreateWarehouse();
+            PrintWarehouse(warehouse);
+            int[] order = CreateOrder(warehouse);
+            PrintRemains(warehouse);
+
         }
     }
 }
