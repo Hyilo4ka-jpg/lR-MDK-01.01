@@ -95,8 +95,20 @@ namespace Лаб_2
             Console.WriteLine(); Console.WriteLine($"Стоимость заказа: {cost} руб.");
             return order;
         }
-
-        static void Main(string[] args)
+        static void PrintRemains(Material[] warehouse)
+        {
+            Console.WriteLine();
+            Console.Write("Остатки на складе: ");
+            for (int i = 0; i < warehouse.Length; i++)
+            {
+                Console.Write($"{warehouse[i].Name} {warehouse[i].Quantity}");
+                if (i < warehouse.Length - 1)
+                {
+                    Console.Write(", ");
+                }
+            }
+        }
+            static void Main(string[] args)
         {
         }
     }
