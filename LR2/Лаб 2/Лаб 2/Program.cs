@@ -32,6 +32,18 @@ namespace Лаб_2
             new Material("гвозди", 90, 35)
             };
         }
+        static void PrintWarehouse(Material[] warehouse)
+        {
+            Console.WriteLine("Склад стройматериалов:");
+            Console.WriteLine();
+
+            for (int i = 0; i < warehouse.Length; i++)
+            {
+                Console.WriteLine($"{i + 1}. {warehouse[i].Name} — " + $"{warehouse[i].Price} руб., " + $"{warehouse[i].Quantity} шт.");
+            }
+            Console.WriteLine();
+        }
+
         static void Main(string[] args)
         {
         }
