@@ -6,5 +6,8 @@ using System.Threading.Tasks;
 
 namespace лаб_3
 {
+    internal class Program
+    {
+        static Order CreateOrder();
 
 }
