@@ -69,6 +69,39 @@ namespace LR_3
 
             Console.WriteLine();
         }
+
+
+        public bool ProcessOrder(Order order)
+        {
+            foreach (var item in order.Items)
+            {
+                Material material = GetMaterial(item.Key);
+
+                if (material == null ||
+                    item.Value > material.Quantity)
+                {
+                    Console.WriteLine();
+                    Console.WriteLine(
+                        $"Недостаточно материала: " +
+                        $"{(material != null ? material.Name : item.Key.ToString())}.");
+
+                    return false;
+                }
+            }
+
+            foreach (var item in order.Items)
+            {
+                Material material = GetMaterial(item.Key);
+                material.RemoveQuantity(item.Value);
+            }
+
+            Console.WriteLine();
+            Console.WriteLine(
+                $"Стоимость заказа: {order.CalculateCost(this)} руб.");
+
+            return true;
+        }
+
     }
 
 }
