@@ -22,7 +22,10 @@ namespace PR_3
                 writer.WriteLine("Colored paper;250;350");
                 writer.WriteLine("A5 notebook;160;80");
                 writer.WriteLine("Acrylic paints; 600; 150");
-                } 
+                }
+
+            Console.WriteLine("Информация записана!(УРАААААААААА)");
+            Console.ReadKey();
 
             List<Product> products = new List<Product>();
 
