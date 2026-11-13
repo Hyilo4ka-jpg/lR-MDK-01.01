@@ -59,5 +59,10 @@ namespace PR_3
         {
             return GetCost() * GetDiscount() / 100;
         }
+
+        public double GetFinalCost()
+        {
+            return GetCost() - GetDiscountSum();
+        }
     }
 }
