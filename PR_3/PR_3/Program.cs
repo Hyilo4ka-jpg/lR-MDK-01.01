@@ -27,7 +27,19 @@ namespace PR_3
             Console.WriteLine("Информация записана!(УРАААААААААА)");
             Console.ReadKey();
 
-            List<Product> products = new List<Product>();
+            using (StreamReader reader = new StreamReader(path))
+            {
+                string line;
+
+                Console.WriteLine("\nДанные из данного файла:");
+                while ((line = reader.ReadLine()) != null)
+                {
+                    string[] parts = line.Split(';');
+
+                    Console.WriteLine($"Name_: {parts[0]}, Price_: {parts[1]}, Quantity_: {parts[2]}");
+                }
+
+                List<Product> products = new List<Product>();
 
             Product product1 = new Product();
             product1.SetName("Клей Момент");
