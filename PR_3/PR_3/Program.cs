@@ -13,6 +13,17 @@ namespace PR_3
         {
             string path = "popo.txt";
 
+                using (StreamWriter writer = new StreamWriter(path))
+                {
+                writer.WriteLine("Name_;Price_;Quantity_");
+                writer.WriteLine("Cley Moment;350;200");
+                writer.WriteLine("Colored pencils “Kalyaka‑Malyaka”;400;20");
+                writer.WriteLine("Acrylic paints;600;150");
+                writer.WriteLine("Colored paper;250;350");
+                writer.WriteLine("A5 notebook;160;80");
+                writer.WriteLine("Acrylic paints; 600; 150");
+                } 
+
             List<Product> products = new List<Product>();
 
             Product product1 = new Product();
@@ -72,3 +83,4 @@ namespace PR_3
         }
     }
 }
+
