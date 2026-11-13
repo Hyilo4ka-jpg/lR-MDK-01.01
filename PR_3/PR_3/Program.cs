@@ -11,6 +11,8 @@ namespace PR_3
     {
         static void Main(string[] args)
         {
+            string path = "popo.txt";
+
             List<Product> products = new List<Product>();
 
             Product product1 = new Product();
