@@ -10,6 +10,13 @@ namespace PR_3
     {
         static void Main(string[] args)
         {
+            List<Product> products = new List<Product>();
+
+            Product product1 = new Product();
+            product1.SetName("Клей Момент");
+            product1.SetPrice(350);
+            product1.SetQuantity(200);
+            products.Add(product1);
         }
     }
 }
