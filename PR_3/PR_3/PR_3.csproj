@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Artistcs.cs" />
     <Compile Include="Chancellery.cs" />
+    <Compile Include="CSVLoader.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
